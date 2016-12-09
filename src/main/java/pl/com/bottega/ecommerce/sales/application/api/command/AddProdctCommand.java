@@ -18,15 +18,14 @@ package pl.com.bottega.ecommerce.sales.application.api.command;
 import pl.com.bottega.cqrs.annotations.Command;
 import pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.AggregateId;
 
-@Command()
+@Command
 public class AddProdctCommand {
 
 	private AggregateId orderId;
 	private AggregateId productId;
 	private int quantity;
 	
-	public AddProdctCommand(AggregateId orderId, AggregateId productId,
-			int quantity) {
+	public AddProdctCommand(AggregateId orderId, AggregateId productId, int quantity) {
 		this.orderId = orderId;
 		this.productId = productId;
 		this.quantity = quantity;
